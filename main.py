@@ -2,8 +2,7 @@ class AreaPath():
     def __init__(self, path:str) -> None:
         super().__init__()
         nodes = path.split('\\')
-        # Remove empty string
-        nodes.pop(0)
+        del nodes[0]
         self.project = nodes.pop(0)
         self.node = nodes.pop()
         if nodes:
